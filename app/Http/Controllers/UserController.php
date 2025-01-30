@@ -9,8 +9,8 @@ class UserController extends Controller
 {
     public function home()
     {
-        // $pets = \App\Models\Pet::latest()->take(5)->get();
-        // return view('home', compact('pets'));
+        $animal = \App\Models\Pet::latest()->take(5)->get();
+        return view('home', compact('pets'));
         return view('home');
     }
 

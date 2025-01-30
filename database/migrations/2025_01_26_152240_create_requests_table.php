@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('animal_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('status')->default('pending');
+            $table->enum('status', ['pending', 'accepted', 'denied'])->default('pending');
             $table->text('review')->nullable(); //begint leeg
             $table->timestamps();
 

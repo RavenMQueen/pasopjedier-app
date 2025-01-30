@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('animal_kinds', function (Blueprint $table) {
+            $table->id();
             $table->string("kind")->unique();
         });
     }

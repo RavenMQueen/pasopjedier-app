@@ -15,13 +15,13 @@
     </header>
     <main>
         <section class="pets-grid">
-            <!-- @foreach($pets as $pet) -->
+            @foreach($pets as $pet)
             <article class="pet-card">
                 <img src="{{ asset('storage/' . $pet->photo_path) }}" alt="{{ $pet->name }}">
                 <h2>{{ $pet->name }}</h2>
                 <p>{{ $pet->location }}</p>
             </article>
-            <!-- @endforeach -->
+            @endforeach
         </section>
     </main>
 </body>
